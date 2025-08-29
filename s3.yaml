@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      KeyName: vmtest
+      InstanceType: t2.micro
+      ImageId: ami-0360c520857e3138f
+      Tags:
+        - Key: Name
+          Value: MyEC2Test
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: demo.s3.raja.1801
