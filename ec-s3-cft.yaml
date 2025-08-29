@@ -3,13 +3,14 @@ Resources:
   MyInstance:
     Type: AWS::EC2::Instance
     Properties: 
-      KeyName: vmtest
+      KeyName: yourkeypairname
       InstanceType: t2.micro
       ImageId: ami-0360c520857e3138f
       Tags:
         - Key: Name
-          Value: MyEC2Test
+          Value: MyEC2Test #Name of instance you want to give
   S3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: demo.s3.raja.1801
+
